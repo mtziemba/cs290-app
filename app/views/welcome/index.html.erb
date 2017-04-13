@@ -1,0 +1,46 @@
+<div class="row" id="menu">
+  <div class="col s12 m4">
+    <div class="card light-blue">
+      <div class="card-image">
+        <a href="http://tinypic.com?ref=2is9k6o" target="_blank"><img src="http://i66.tinypic.com/2is9k6o.jpg" border="0" alt="Earth"></a>
+        <span class="card-title">Cities</span>
+      </div>
+      <div class="card-content">
+        <p>See what cities people are talking about.</p>
+      </div>
+      <div class="card-action">
+        <%= link_to "Cities", articles_path, controller: 'articles' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s12 m4">
+    <div class="card green">
+      <div class="card-image">
+        <a href="http://tinypic.com?ref=25g88zk" target="_blank"><img src="http://i68.tinypic.com/25g88zk.jpg" border="0" alt="New"></a>
+        <span class="card-title">New Place</span>
+      </div>
+      <div class="card-content">
+        <p>Click here to post a new place.</p>
+      </div>
+      <div class="card-action">
+        <%= link_to "Add a city", new_article_path %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s12 m4">
+    <div class="card indigo">
+      <div class="card-image">
+        <a href="http://tinypic.com?ref=23h29hs" target="_blank"><img src="http://i63.tinypic.com/23h29hs.jpg" border="0" alt="yours"></a>
+        <span class="card-title">Your Posts</span>
+      </div>
+      <div class="card-content">
+        <p>See the places you've posted.</p>
+      </div>
+      <div class="card-action">
+        <%= link_to'Your Posts', show_user_posts_path %>
+      </div>
+    </div>
+  </div>
+</div>

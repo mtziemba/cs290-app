@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Places to Go</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav>
+      <div class="container">
+        <a href="#" class="brand-logo">Places to Go</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <!-- Sign in -->
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+
+          <!-- Sign out -->
+          <li><%= link_to "Sign Out", destroy_user_session_path%></li>
+
+          <!-- Sign up -->
+          <li><%= link_to "Sign Up", new_user_registration_path%></li>
+        </ul>
+      </div>
+    </nav>
+  	<div class="container">
+  		<%= yield %>
+  	</div>
+  </body>
+</html>

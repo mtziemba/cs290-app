@@ -1,0 +1,33 @@
+<h3>Welcome!</h3>
+      <p>This summer, I will be working at Apple. Since I'm from New Jersey, I want to know all the best places to visit; including landmarks, cities, restaurants, and more.</p>
+      <p>Make a new post if you have any ideas of cities I should visit. Or, if you know of a cool place to go in a city that's posted, add it in a recommendation for that city!</p>
+
+<h3>Sign Up</h3>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    
+    <%= f.email_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+    <% if @validatable %>
+      <span class="help-block"><%= @minimum_password_length %> characters minimum</span>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <%= f.submit "Sign up", class: 'btn btn-primary' %>
+  <%= link_to new_user_session_path, class: 'btn btn-secondary' %>
+<% end %>
+
+<%= render "devise/shared/links" %>

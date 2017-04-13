@@ -1,0 +1,20 @@
+
+
+<h2>
+  <%= @article.title %>
+</h2>
+<span id="post-image"><%= image_tag @article.photo.url, :class => 'materialboxed' %></span>
+
+<p class="post-body">
+  <strong>Describe the place and your experience there:</strong>
+  <%= @article.text %>
+</p>
+ <hr>
+<h4>Comments</h4>
+<%= render @article.comments %>
+ 
+<h6>Add a comment:</h6>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
