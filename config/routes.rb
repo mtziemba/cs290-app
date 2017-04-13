@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   # resources :articles
   
-  # root 'welcome#index'
-  root 'welcome#title'
+  root 'welcome#index'
+  # root 'welcome#title'
 
   resources :articles do
     resources :comments
