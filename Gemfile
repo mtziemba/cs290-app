@@ -25,6 +25,9 @@ gem 'materialize-sass'
 # Use paperclip for photos
 gem "paperclip", "~> 5.0.0"
 
+# amazon web services
+gem 'aws-sdk', '~> 2.3'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'rails_12factor'
