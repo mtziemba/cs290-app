@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Places to Go</title>
+    <title>For World Travelers</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
 
+    <!-- Compiled and minified CSS -->
+  
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+          
+  </head>
+<style>
+#here {
+  padding-top: 25px;
+}
+</style>
   <body>
     <nav>
       <div class="container">
-        <a href="#" class="brand-logo">Places to Go</a>
+        <a href="#" class="brand-logo">For World Travelers</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <!-- Sign in -->
           <li><%= link_to "Sign In", new_user_session_path %></li>
@@ -25,8 +36,35 @@
         </ul>
       </div>
     </nav>
-  	<div class="container">
+  	<div class="container" id="here">
   		<%= yield %>
   	</div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">By Mary Ziemba</h5>
+            <p class="grey-text text-lighten-4">For the purposes of grading, you can login using the email mtz3@duke.edu and the password "password"</p>
+          </div>
+          <!-- <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017 Under the MIT License
+        <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+        </div>
+      </div>
+    </footer>
+  
   </body>
 </html>

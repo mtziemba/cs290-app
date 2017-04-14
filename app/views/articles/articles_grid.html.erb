@@ -1,28 +1,17 @@
 <h1>Places</h1>
 
-<a class="waves-effect waves-light btn" onclick="gridToList()">View Continuous Scroll</a>
-<a class="waves-effect waves-light btn" onclick="listToGrid()">View Grid</a>
-
 <script>
-  function listToGrid() {
-    window.location = '/articles_grid';
-  }
-  function gridToList() {
+  function toList() {
     window.location = '/articles_list';
   }
 </script>
 
-<style>
-  .card {
-    margin-bottom: 200px;
-    padding-bottom: 10%;
-  }
-</style>
+<a class="waves-effect waves-light btn" onclick="toList()">View Continuous Scroll</a> 
 
-    <% @articles.each do |article| %>
-      <div class="row">
-        <div class="col s12">
-          <div class="card light-blue">
+<div class="row">
+  <% @articles.each do |article| %>
+        <div class="col s3 m3 l3">
+          <div class="card">
             <div class="card-image">
               <%= image_tag article.photo.url %>
               <span class="card-title"><%= article.title %></span>
@@ -34,7 +23,6 @@
             </div>
           </div>
         </div>
-      </div>
     <% end %>
-
-<%= link_to 'Back', welcome_index_path %>
+</div>
+<%= link_to 'Back to main menu', welcome_index_path, :class => "waves-effect waves-light btn" %>

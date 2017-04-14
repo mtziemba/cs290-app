@@ -1,12 +1,17 @@
-<% @userPosts.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-<a href=""></a>
+  <% @userPosts.each do |article| %>
+        <div class="col s3 m3 l3">
+          <div class="card">
+            <div class="card-image">
+              <%= image_tag article.photo.url %>
+              <span class="card-title"><%= article.title %></span>
+            </div>
+            <div class="card-action">
+              <%= link_to 'Show', article_path(article) %>
+              <%= link_to 'Edit', edit_article_path(article) %>
+              <%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+</div>
+<%= link_to 'Back to main menu', welcome_index_path, :class => "waves-effect waves-light btn" %>

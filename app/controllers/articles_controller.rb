@@ -14,6 +14,14 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def articles_grid
+    @articles = Article.all
+  end
+
+  def articles_list
+    @articles = Article.all
+  end
+
   def show_user_posts
     if user_signed_in?
       @userPosts = current_user.articles.all

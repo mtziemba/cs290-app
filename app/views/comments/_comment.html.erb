@@ -1,15 +1,11 @@
-<p>
-  <strong>Recommender:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Recommenation:</strong><span> What should I do, where should I eat, or what should I see here?</span>
+<p id="comment-body">
+ <span></span>
   <%= comment.body %>
 </p>
- 
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
+<p "comment-commenter">
+  By <%= comment.commenter %>
+</p>
+
+  <%= link_to 'Delete comment', [comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
-</p>

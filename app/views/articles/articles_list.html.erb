@@ -1,23 +1,19 @@
 <h1>Places</h1>
 
-<a class="waves-effect waves-light btn" onclick="gridToList()">View Continuous Scroll</a>
-<a class="waves-effect waves-light btn" onclick="listToGrid()">View Grid</a>
-
-<script>
-  function listToGrid() {
-    window.location = '/articles_grid';
-  }
-  function gridToList() {
-    window.location = '/articles_list';
-  }
-</script>
-
 <style>
   .card {
     margin-bottom: 200px;
     padding-bottom: 10%;
   }
 </style>
+
+<script>
+  function toGrid() {
+    window.location = '/articles_grid';
+  }
+</script>
+
+<a class="waves-effect waves-light btn" onclick="toGrid()">Grid View</a>
 
     <% @articles.each do |article| %>
       <div class="row">
